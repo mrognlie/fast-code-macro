@@ -9,7 +9,7 @@ Throughout, I emphasize the importance of *profiling* your code, both with simpl
 There are then six main principles:
 
 1. **Compiled is quick, the interpreter inches**
-    * Python and similar languages are "slow" because pure Python works through the interpreter, which has a lot of overhead. Moving bottleneck operations to compiled code, either by vectorizing them or by compiling them with a tool like Numba, is essential for speed.
+    * Python and similar languages are "slow" because pure Python works through the interpreter, which has a lot of overhead. Moving bottleneck operations to compiled code, either by vectorizing them or by compiling them with a tool like Numba, is essential for speed. But not everything needs to be compiled—just the critical parts.
 
 2. **Memory matters**
     * Reading and writing to memory can dominate the direct computational cost of a routine. It's often useful to avoid unnecessary reads and writes (e.g. creating intermediate arrays and reading from them), and also to make sure that data is stored in an efficient, contiguous way.
